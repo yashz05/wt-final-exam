@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALAR COUNT</title>
+</head>
+<body>
+Experience :
+<input type="number" id="exp" value="0" placeholder="ENTER NUMBER OF YEARS WORKED">
+
+<br>
+<br>
+Age :
+<input type="number" id="age"  placeholder="ENTER YOUR AGE">
+
+<br>
+<br>
+<div id="salary">
+
+</div>
+<br>
+<br>
+<button onclick="calculate()">CALCULATE</button>
+<script>
+function calculate()
+{
+    var age = document.getElementById("age").value;
+    var exp = document.getElementById("exp").value;
+    var salary = document.getElementById("salary");
+    if(age >=  35 && exp > 0){
+        salary.innerHTML  = "Salary is ₹6000"
+
+    }else if((age >= 28 && age < 35) && exp > 0){
+        salary.innerHTML  = "Salary is ₹4800"
+    }else if(age < 28 && exp > 0){
+        salary.innerHTML  = "Salary is ₹3000"
+    }else{
+        salary.innerHTML  = "Salary is ₹2000"
+    }
+}
+
+
+</script>
+
+</body>
+</html>

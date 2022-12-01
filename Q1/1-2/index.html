@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <p id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, totam veritatis accusamus eveniet debitis quam similique fugiat obcaecati eius voluptate iure ad aliquam quaerat! Suscipit quos consequuntur voluptatibus architecto enim.
+    </p>
+
+    <button id="ldmode" onclick="ldswtich()">SWITCH TO DARK MODE </button>
+    <script>
+        var dark = true;
+        var para = document.getElementById("para");
+        var btn = document.getElementById("ldmode");
+        function ldswtich(){
+                if(dark){
+                   
+                    para.style.color = "white";
+                    document.body.style.background = "black";
+                    dark = !dark;
+                    btn.innerHTML = "SWITCH TO LIGHT MODE";
+
+                }else{
+                    para.style.color = "black";
+                    document.body.style.background = "white";
+                    dark = !dark;
+                    btn.innerHTML = "SWITCH TO DARK MODE";
+                }
+               
+        }
+    </script>
+</body>
+</html>

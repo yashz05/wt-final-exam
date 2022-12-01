@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATION</title>
+</head>
+<body>
+
+<div style="margin: 6px;">
+    <input type="text" id="fn" placeholder="ENTER First Name" style="border-color:  blueviolet;padding :10px; border-radius : 10px">
+</div>
+<div style="color:red;margin-left: 10px;" id="fnerror"></div>
+        
+<div style="margin: 6px;">
+    <input type="password" id="pass" placeholder="ENTER password" style="border-color:  blueviolet;padding :10px; border-radius : 10px">
+</div>
+<div style="color:red;margin-left: 10px;" id="pserror"></div>
+<div style="margin: 6px;">
+    <input type="email" id="email" placeholder="ENTER Email" style="border-color:  blueviolet;padding :10px; border-radius : 10px">
+</div>
+<div style="color:red;margin-left: 10px;" id="emerror"></div>
+<div style="margin: 6px;">
+    <input type="tel"  id="pno" placeholder="ENTER Phone Number" style="border-color:  blueviolet;padding :10px; border-radius : 10px">
+</div>
+<div style="color:red;margin-left: 10px;" id="pnoerror"></div>
+<div style="margin: 6px;">
+    <Textarea id="address" style="border-color:   blueviolet;padding :10px; border-radius : 10px">
+</Textarea>
+<div style="color:red;margin-left: 10px;" id="adderrreo"></div>
+<br>
+
+<button onclick="validate()" style="margin-top: 30px; ">SUBMIT</button>
+</div>
+   
+
+    <script>
+            function validate(){
+                //firsnt name validation
+                var name = document.getElementById("fn");
+                if(name.value.split('').length < 6){
+                    document.getElementById("fnerror").innerHTML = "Name Should be more than 6 Characters"
+                }else{
+                    document.getElementById("fnerror").innerHTML = '';
+                }
+                //Password Validation
+                var ps = document.getElementById("pass");
+                if(ps.value.split('').length < 6){
+                    document.getElementById("pserror").innerHTML = "Password Should be more than 6 Characters"
+                }else{
+                    document.getElementById("pserror").innerHTML = '';
+                }
+
+                //EMAIL VALIDATION 
+
+                var em = document.getElementById("email");
+                if(em.value.split('').includes('@') == false && em.value.split('').includes('.') == false){
+                    document.getElementById("emerror").innerHTML = "Not Valid Email Address"
+                }else{
+                    document.getElementById("emerror").innerHTML = '';
+                }
+                 //MOBILE VALIDATION 
+
+                 var pno = document.getElementById("pno");
+                if(pno.value.split('').length  != 10){
+                    document.getElementById("pnoerror").innerHTML = "Please Enter Valid Phone Number"
+                }else{
+                    document.getElementById("pnoerror").innerHTML = '';
+                }
+                //ADDRESS VALIDATION 
+
+                var add = document.getElementById("address");
+              if(add.value == '' || add.value == null || add.value == "Enter Address"){
+                
+                document.getElementById("adderrreo").innerHTML = "Please Enter Address"
+                }else{
+                    document.getElementById("adderrreo").innerHTML = '';
+                }
+                
+            }
+    </script>
+</body>
+</html>

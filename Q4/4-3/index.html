@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVERSE INT</title>
+</head>
+<body>
+    CHECK CONSOLE
+    <script>
+      
+
+
+        function reverseInt(s){
+            console.log("NUMBER BEFORE REVERSE :" + s )
+
+            var a  = parseInt(s).toString()
+
+            a = a.split("").reverse();
+            b = '';
+           a.forEach(element => {
+            b+=element;
+           });
+           console.log(b)
+          
+        }
+        reverseInt(9833);
+
+
+    </script>
+
+</body>
+
+</html>
